@@ -1,0 +1,43 @@
+/* ==========================================================================
+   #SPINNER
+   ========================================================================== */
+
+.c-spinner {
+  display: inline-block;
+  margin: auto;
+  border-radius: 50%;
+  width: $unit-large;
+  height: $unit-large;
+  border: 5px solid;
+  border-color: currentcolor transparent;
+  animation: rotate 1.2s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  // vertical-align: middle;
+
+  &--small {
+    width: $unit;
+    height: $unit;
+    border-width: 3px;
+  }
+
+  &--tiny {
+    width: $unit-small;
+    height: $unit-small;
+    border-width: 2px;
+  }
+
+  &--inline {
+    margin-top: -$unit;
+    margin-bottom: -$unit;
+    vertical-align: 25%;
+
+    &.c-spinner--small {
+      margin-top: -$unit-small;
+      margin-bottom: -$unit-small;
+    }
+
+    &.c-spinner--tiny {
+      margin-top: -$unit-tiny;
+      margin-bottom: -$unit-tiny;
+    }
+  }
+}

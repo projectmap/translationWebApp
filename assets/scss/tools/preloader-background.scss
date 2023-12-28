@@ -1,0 +1,20 @@
+///* ========================================================================
+//   #PRELOADER-BACKGROUND
+//   ======================================================================== */
+
+@mixin preloader-background($size: 3em) {
+  animation: preloader-background 2.6s ease infinite;
+
+  @keyframes preloader-background {
+    0% {
+      background-color: $c-gray-3;
+    }
+    15% {
+      background-color: $c-gray-2;
+    }
+    30%,
+    100% {
+      background-color: $c-gray-3;
+    }
+  }
+}

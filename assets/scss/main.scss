@@ -1,0 +1,642 @@
+/* ==========================================================================
+   INUITCSS
+   ========================================================================== */
+
+/**!
+ * Langify Styles, by @lhermann
+ */
+
+/**
+ * inuitcss, by @csswizardry
+ *
+ * github.com/inuitcss | inuitcss.com
+ */
+
+/**************************************
+ * SETTINGS & TOOLS
+ **************************************/
+
+@import 'settings-and-tools';
+/**************************************
+ * TOOLS --> see "settings-and-tools"
+ **************************************/
+
+/**************************************
+ * GENERIC
+ **************************************/
+@import 'inuitcss/generic/generic.box-sizing';
+@import 'inuitcss/generic/generic.normalize';
+@import 'inuitcss/generic/generic.reset';
+@import 'inuitcss/generic/generic.shared';
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/**
+ * 1. Allow overflow-x: hidden to work
+ * 2. Fix safari transition fort smoothing bug
+ */
+html,
+body {
+  position: relative; /* 1 */
+  background-color: $c-white;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; /* 2 */
+}
+
+/*
+ * 1. Make containers default to 100% viewport height
+ */
+html {
+  height: 100%; /* 1 */
+}
+
+/**
+ * 1. Make containers default to 100% viewport height
+ * Note: avoid 'overflow' because it messes with 'position: sticky'
+ */
+body {
+  min-height: 100%; /* 1 */
+}
+
+kbd {
+  color: $c-gray-8;
+  background-color: $c-gray-3;
+  border: 1px solid $c-gray-6;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba($c-black, 0.2), 0 2px 0 0 rgba($c-white, 0.7) inset;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+/**************************************
+ * ELEMENTS
+ **************************************/
+@import 'inuitcss/elements/elements.headings';
+@import 'inuitcss/elements/elements.images';
+@import 'inuitcss/elements/elements.page';
+@import 'elements/fonts';
+@import 'elements/forms';
+@import 'elements/keyframes';
+@import 'elements/typography';
+
+a,
+.egwlink {
+  outline: 0;
+  text-decoration: none;
+  color: $c-link;
+
+  &:hover,
+  &:focus {
+    color: $c-link-hover;
+  }
+
+  &:not(.c-btn):not(:hover):focus {
+    border-bottom: 1px dotted currentcolor;
+  }
+
+  &.is-active {
+    font-weight: bold;
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $c-border;
+  margin: $unit 0;
+}
+
+code {
+  display: inline-block;
+  color: $c-text;
+  padding: 0.15em 0.3em;
+  font-size: 85%;
+  background: $c-border;
+  border-radius: $global-radius;
+}
+
+strong {
+  font-weight: 600;
+}
+
+dl {
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    margin-bottom: $unit-small;
+  }
+}
+
+/**************************************
+ * OBJECTS
+ **************************************/
+@import 'inuitcss/objects/objects.box';
+@import 'inuitcss/objects/objects.flag';
+@import 'inuitcss/objects/objects.layout';
+@import 'inuitcss/objects/objects.list-bare';
+@import 'inuitcss/objects/objects.media';
+@import 'inuitcss/objects/objects.pack';
+@import 'inuitcss/objects/objects.ratio';
+@import 'inuitcss/objects/objects.wrapper';
+@import 'objects/flex';
+@import 'objects/list-inline';
+
+.o-wrapper--full-width {
+  max-width: 100%;
+}
+
+.o-wrapper--flush {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.o-wrapper--slim {
+  max-width: 980px;
+}
+
+.o-wrapper--slimer {
+  max-width: 680px;
+}
+
+/**************************************
+ * COMPONENTS
+ **************************************/
+@import 'components/alert';
+@import 'components/articles';
+@import 'components/buttons';
+@import 'components/dot';
+@import 'components/dropdowns';
+@import 'components/flats';
+@import 'components/forms';
+@import 'components/links';
+@import 'components/menu';
+@import 'components/paper';
+@import 'components/spinner';
+@import 'components/steps';
+@import 'components/tables';
+@import 'components/tooltip';
+@import 'components/user';
+
+/**************************************
+ * SCOPED COMPONENTS
+ **************************************/
+@import 'scoped/timeline';
+
+/**************************************
+ * PLUGINS
+ **************************************/
+@import 'plugins/vue-transitions';
+
+.ProseMirror {
+  outline: none;
+}
+
+/**************************************
+ * UTILITIES
+ **************************************/
+@import 'inuitcss/utilities/utilities.clearfix';
+@import 'inuitcss/utilities/utilities.widths';
+@import 'inuitcss/utilities/utilities.headings';
+@import 'inuitcss/utilities/utilities.print';
+@import 'inuitcss/utilities/utilities.hide';
+@import 'utilities/icons';
+@import 'utilities/orientation';
+@import 'utilities/text-align';
+@import 'utilities/content';
+@import 'utilities/blind-text';
+
+/*
+ * Spacings
+ *************************/
+.u-mh-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ * Text Weight Utilities
+ *************************/
+.u-lighter {
+  font-weight: 300 !important;
+}
+.u-light {
+  font-weight: 400 !important;
+}
+.u-normal {
+  font-weight: 500 !important;
+}
+.u-bold {
+  font-weight: 600 !important;
+}
+.u-bolder {
+  font-weight: 700 !important;
+}
+
+/*
+ * Text Size Utilities
+ *************************/
+.u-tiniest {
+  @include font-size($font-size-tiniest, $important: true);
+}
+.u-tinier {
+  @include font-size($font-size-tinier, $important: true);
+}
+.u-tiny {
+  @include font-size($font-size-tiny, $important: true);
+}
+.u-small {
+  @include font-size($font-size-small, $important: true);
+}
+.u-default {
+  @include font-size($font-size, $important: true);
+}
+.u-large {
+  @include font-size($font-size-large, $important: true);
+}
+.u-huge {
+  @include font-size($font-size-huge, $important: true);
+}
+.u-huger {
+  @include font-size($font-size-huger, $important: true);
+}
+.u-hugest {
+  @include font-size($font-size-hugest, $important: true);
+}
+
+/*
+ * Line Height Utilities
+ *************************/
+.u-none {
+  line-height: 1;
+}
+.u-tight {
+  line-height: 1.25;
+}
+.u-snug {
+  line-height: 1.375;
+}
+.u-leading {
+  line-height: 1.5;
+}
+.u-relaxed {
+  line-height: 1.625;
+}
+.u-loose {
+  line-height: 2;
+}
+
+/*
+ * Text Color Utilities
+ *************************/
+.u-text {
+  color: $c-text !important;
+}
+.u-white {
+  color: $c-white !important;
+}
+.u-green {
+  color: $c-green-5 !important;
+}
+.u-red {
+  color: $c-red-5 !important;
+}
+.u-blue {
+  color: $c-primary-5 !important;
+}
+.u-yellow {
+  color: $c-yellow-5 !important;
+}
+.u-purple {
+  color: $c-purple-6 !important;
+}
+.u-muted {
+  color: $c-muted !important;
+}
+.u-dark-green {
+  color: $c-green-9 !important;
+}
+
+/*
+ * Other Text Utilities
+ *************************/
+.u-uppercase {
+  text-transform: uppercase;
+}
+.u-lowercase {
+  text-transform: lowercase;
+}
+.u-capitalize {
+  text-transform: capitalize;
+}
+.u-nowrap {
+  white-space: nowrap;
+}
+.u-subtitle {
+  text-transform: uppercase;
+  color: $c-muted;
+}
+
+.u-rtl {
+  direction: rtl;
+  text-align: start;
+}
+
+/*
+ * Alternative Headings
+ *************************/
+.u-alt,
+[class^='u-'][class*='-alt'] {
+  text-transform: uppercase;
+  color: $c-muted;
+}
+
+.u-h1-alt {
+  @include font-size($font-size-huge, $important: true);
+}
+.u-h2-alt {
+  @include font-size($font-size-large, $important: true);
+}
+.u-h3-alt {
+  @include font-size($font-size, $important: true);
+}
+.u-h4-alt {
+  @include font-size($font-size-small, $important: true);
+}
+.u-h5-alt {
+  @include font-size($font-size-tiny, $important: true);
+}
+
+/*
+ * Background Color Utilities
+ *************************/
+.u-bg {
+  background-color: $c-gray-1;
+}
+.u-bg-green {
+  background-color: $c-green-7;
+}
+.u-bg-red {
+  background-color: $c-red-7;
+}
+.u-bg-dark {
+  background-color: $c-dark;
+}
+
+/*
+ * Other Utilities
+ *************************/
+.u-faded {
+  opacity: 0.5;
+}
+
+.u-overflow-hidden {
+  overflow: hidden;
+}
+
+.u-truncate {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.u-no-btn,
+.u-icon-btn {
+  display: inline-block;
+  border-width: 0;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+  padding: 0;
+  transition: color $global-transition, opacity $global-transition;
+  line-height: 1;
+}
+
+.u-icon-btn {
+  padding: 0 $unit-tiny/2;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.u-no-btn:disabled,
+.u-icon-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.u-no-link {
+  color: $c-text;
+
+  &:hover,
+  &:focus {
+    color: $c-text;
+  }
+}
+
+/*
+ * Display Utilities
+ *************************/
+.u-db {
+  display: block !important;
+}
+.u-dib {
+  display: inline-block !important;
+}
+.u-di {
+  display: inline !important;
+}
+.u-df {
+  display: flex !important;
+}
+.u-dif {
+  display: inline-flex !important;
+}
+
+/*
+ * Box Utilities
+ *************************/
+.u-relative {
+  position: relative;
+}
+
+.u-z10 {
+  z-index: 10;
+}
+.u-z20 {
+  z-index: 20;
+}
+.u-z30 {
+  z-index: 30;
+}
+.u-z100 {
+  z-index: 100;
+}
+
+.u-rounded {
+  border-radius: $global-radius;
+}
+.u-circle {
+  border-radius: 50%;
+}
+.u-border0 {
+  border-width: 0;
+}
+.u-border {
+  border: 2px solid $c-border;
+}
+
+.u-shrink {
+  flex-shrink: 99;
+}
+.u-shrink0 {
+  flex-shrink: 0;
+}
+.u-grow {
+  flex-grow: 99;
+}
+.u-grow0 {
+  flex-grow: 0;
+}
+
+.u-nowrap {
+  white-space: nowrap;
+}
+
+/*
+ * Shadows
+ *************************/
+.u-shadow {
+  box-shadow: $global-shadow-3;
+
+  &-1 {
+    box-shadow: $global-shadow-1;
+  }
+  &-2 {
+    box-shadow: $global-shadow-2;
+  }
+  &-3 {
+    box-shadow: $global-shadow-3;
+  }
+  &-4 {
+    box-shadow: $global-shadow-4;
+  }
+  &-5 {
+    box-shadow: $global-shadow-5;
+  }
+}
+
+/*
+ * Attention dot
+ *************************/
+.u-attention {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -$unit-tiny;
+    right: -$unit-tiny;
+    width: $unit-small;
+    height: $unit-small;
+    background-color: $c-red-5;
+    box-shadow: $global-shadow-2;
+    border-radius: 50%;
+  }
+}
+
+/**************************************
+ * RESPONSIVE UTILITIES
+ **************************************/
+@import 'utilities/responsive-spacings';
+@import 'utilities/responsive-hide';
+
+/**************************************
+ * HACKS
+ **************************************/
+
+/*
+ * v-popover defines
+ */
+.v-popover,
+.v-popover > .trigger {
+  display: inline-block;
+}
+
+.v-popover--block,
+.v-popover--block > .trigger {
+  display: block !important;
+}
+
+.v-popover--flex,
+.v-popover--flex > .trigger {
+  display: flex !important;
+}
+
+.v-popover--inline,
+.v-popover--inline > .trigger {
+  display: inline !important;
+}
+
+// display: flex;
+// white-space: nowrap;
+// width: fit-content;
+
+// glossary-entry {
+//   display: inline-block;
+//   flex-wrap: wrap;
+// }
+
+.selected_letter {
+  border: 2px solid $c-primary-5 !important;
+  padding: 0px 10px 3px 10px;
+
+  margin-bottom: $unit;
+}
+.non_selected:hover {
+  border: 2px solid #cad1d8;
+  padding: 0px 10px 3px 10px;
+  background: #cad1d8;
+  margin-bottom: $unit;
+}
+
+iron-overlay-backdrop {
+  z-index: -1 !important;
+}
+
+.non_destkop_hr {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .non_destkop_hr {
+    display: block;
+  }
+}
+
+.u-rtl {
+  direction: ltr !important;
+}
+
+.line-divider {
+  content: '';
+  width: 1px;
+  background: $c-border;
+}

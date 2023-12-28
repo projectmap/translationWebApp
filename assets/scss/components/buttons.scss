@@ -1,0 +1,569 @@
+/* ==========================================================================
+#BUTTONS
+========================================================================== */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ * 6. Prevent .c-article a:hover from adding a border
+ */
+
+.c-btn {
+  display: inline-block;
+  /* [1] */
+  transition-property: opacity, color, background-color, border-color;
+  transition-duration: $global-transition;
+  border-width: 0;
+  /* [6] */
+  border-radius: $global-radius;
+  cursor: pointer;
+  /* [5] */
+  padding: $unit-small $unit;
+  text-align: center;
+  /* [4] */
+  font: inherit;
+  /* [3] */
+  font-weight: 400;
+  color: $c-text;
+  background-color: $c-gray-2;
+
+  &.is-active,
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: $c-gray-8;
+    text-decoration: none;
+    /* [4] */
+    color: $c-gray-2;
+  }
+
+  &:disabled,
+  &[disabled] {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+/* Style variants
+========================================================================== */
+.c-btn--primary {
+  background-color: $c-primary-5;
+  color: $c-primary-1;
+
+  &.is-active,
+  &:hover,
+  &:focus {
+    background-color: $c-primary-7;
+    color: $c-primary-2;
+  }
+
+  &:disabled {
+    background-color: $c-primary-5;
+  }
+}
+
+.c-btn--yellow {
+  background-color: $c-yellow-5;
+  color: $c-yellow-1;
+
+  &.is-active,
+  &:hover,
+  &:focus {
+    background-color: $c-yellow-7;
+    color: $c-yellow-2;
+  }
+
+  &:disabled {
+    background-color: $c-yellow-5;
+  }
+}
+
+.c-btn--info {
+  background-color: $c-info-5;
+  color: $c-info-1;
+
+  &.is-active,
+  &:hover,
+  &:focus {
+    background-color: $c-info-7;
+    color: $c-info-2;
+  }
+
+  &:disabled {
+    background-color: $c-info-5;
+  }
+}
+
+.c-btn--green {
+  background-color: $c-green-5;
+  color: $c-green-1;
+
+  &.is-active,
+  &:hover,
+  &:focus {
+    background-color: $c-green-6;
+    color: $c-green-2;
+  }
+
+  &:disabled {
+    background-color: $c-green-5;
+  }
+}
+
+.c-btn--red {
+  background-color: $c-red-5;
+  color: $c-white;
+
+  &.is-active,
+  &:hover,
+  &:focus {
+    background-color: $c-red-6;
+    color: $c-red-1;
+  }
+
+  &:disabled {
+    background-color: $c-red-5;
+  }
+}
+
+.c-btn--dark {
+  background-color: $c-gray-7;
+  color: $c-gray-2;
+
+  &.is-active,
+  &:hover,
+  &:focus {
+    background-color: $c-gray-9;
+    color: $c-gray-2;
+  }
+
+  &:disabled {
+    background-color: $c-gray-7;
+    color: $c-gray-3;
+  }
+}
+
+.c-btn--light {
+  background-color: $c-white;
+  color: $c-gray-8;
+
+  &.is-active,
+  &:hover,
+  &:focus {
+    background-color: $c-gray-2;
+    color: $c-gray-9;
+  }
+
+  &:disabled {
+    background-color: $c-gray-1;
+    color: $c-gray-5;
+  }
+}
+
+/* Size variants
+========================================================================== */
+.c-btn--- {
+  padding: 0 $unit-0;
+}
+
+.c-btn-- {
+  padding: calc($unit-1 / 2) $unit-1;
+}
+
+.c-btn- {
+  padding: $unit-1 $unit-3;
+}
+
+// c-btn { padding: $unit-3 $unit-5; }
+.c-btn\+ {
+  padding: $unit-5 $unit-7;
+}
+
+.c-btn--full-width {
+  width: 100%;
+}
+
+/* Ghost buttons
+========================================================================== */
+
+/**
+* Ghost buttons have see-through backgrounds and are bordered.
+*/
+
+$btn-ghost-border-width: 1px;
+
+.c-btn--ghost {
+  border: $btn-ghost-border-width solid currentColor;
+  padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width)
+    ($inuit-global-spacing-unit - $btn-ghost-border-width);
+  color: currentcolor;
+  background-color: transparent;
+  border-color: currentcolor;
+
+  &.is-active,
+  &:active,
+  &:hover,
+  &:focus {
+    background: $c-gray-8;
+    color: $c-gray-2;
+    border-color: $c-gray-8;
+  }
+
+  &:disabled:disabled {
+    border-color: currentcolor;
+  }
+
+  &.c-btn--- {
+    padding: 0 ($unit-tiny - $btn-ghost-border-width);
+
+    > * {
+      margin-top: -1px;
+      margin-bottom: -1px;
+    }
+  }
+
+  &.c-btn-- {
+    padding: (calc($unit-tiny / 2) - $btn-ghost-border-width)
+      ($unit-small - $btn-ghost-border-width);
+  }
+
+  &.c-btn- {
+    padding: ($unit-tiny - $btn-ghost-border-width)
+      ($unit-small - $btn-ghost-border-width);
+  }
+
+  &.c-btn\+ {
+    padding: ($unit - $btn-ghost-border-width)
+      ($unit-large - $btn-ghost-border-width);
+  }
+
+  &.c-btn--primary {
+    color: $c-primary-7;
+    border-color: $c-primary-5;
+
+    &.is-active,
+    &:hover,
+    &:focus {
+      color: $c-primary-1;
+      background-color: $c-primary-5;
+      border-color: $c-primary-5;
+    }
+
+    &:disabled {
+      color: $c-primary-4;
+    }
+  }
+
+  &.c-btn--green {
+    color: $c-green-6;
+    border-color: $c-green-5;
+
+    &.is-active,
+    &:hover,
+    &:focus {
+      color: $c-green-1;
+      background-color: $c-green-5;
+      border-color: $c-green-5;
+    }
+
+    &:disabled {
+      color: $c-green-4;
+    }
+  }
+
+  &.c-btn--red {
+    color: $c-red-6;
+    border-color: $c-red-5;
+
+    &.is-active,
+    &:hover,
+    &:focus {
+      color: $c-red-1;
+      background-color: $c-red-5;
+      border-color: $c-red-5;
+    }
+
+    &:disabled {
+      color: $c-red-4;
+    }
+  }
+
+  &.c-btn--yellow {
+    color: $c-yellow-6;
+    border-color: $c-yellow-6;
+
+    &.is-active,
+    &:hover,
+    &:focus {
+      background-color: $c-yellow-6;
+      color: $c-yellow-2;
+    }
+
+    &:disabled {
+      background-color: $c-yellow-5;
+    }
+  }
+
+  &.c-btn--dark {
+    color: $c-gray-8;
+    border-color: $c-gray-7;
+
+    &.is-active,
+    &:hover,
+    &:focus {
+      color: $c-gray-2;
+      background-color: $c-gray-7;
+      border-color: $c-gray-7;
+    }
+
+    &:disabled {
+      color: $c-gray-8;
+    }
+  }
+
+  &.c-btn--light {
+    color: $c-gray-3;
+    border-color: $c-gray-2;
+
+    &.is-active,
+    &:hover,
+    &:focus {
+      color: $c-gray-8;
+      background-color: $c-white;
+      border-color: $c-white;
+    }
+
+    &:disabled {
+      color: $c-gray-2;
+    }
+  }
+
+  // match specificity of style modifiers
+  &.c-btn--ghost:disabled {
+    background: none;
+    transform: translateZ(0);
+  }
+}
+
+/**
+Dark buttons
+**/
+.c-btn--dark {
+  &.c-btn--primary {
+    color: white;
+    background: $c-primary-6;
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: $c-primary-6;
+    width: 97px;
+    height: 49px;
+    cursor: pointer;
+  }
+}
+
+/* Custom
+========================================================================== */
+.c-btn--baseline {
+  vertical-align: baseline;
+}
+
+.c-btn--no-border {
+  border-width: 0;
+}
+
+.c-btn--shadow {
+  box-shadow: $global-shadow-3;
+  border-color: transparent !important;
+}
+
+.c-btn--square,
+.c-btn--circle {
+  display: inline-flex;
+  justify-content: center;
+  width: $unit + $line-height;
+  height: $unit + $line-height;
+  flex-shrink: 0;
+
+  > .u-icon {
+    line-height: $line-height;
+  }
+
+  &,
+  &.c-btn---,
+  &.c-btn--,
+  &.c-btn-,
+  &.c-btn\+ {
+    padding-right: unset;
+    padding-left: unset;
+  }
+
+  &.c-btn--- {
+    width: $line-height;
+    height: $line-height;
+  }
+
+  &.c-btn-- {
+    width: $unit-tiny + $line-height;
+    height: $unit-tiny + $line-height;
+  }
+
+  &.c-btn- {
+    width: $unit-small + $line-height;
+    height: $unit-small + $line-height;
+  }
+
+  &.c-btn\+ {
+    width: $unit-large + $line-height;
+    height: $unit-large + $line-height;
+  }
+}
+
+.c-btn--circle {
+  border-radius: $unit-huge;
+}
+
+.c-btn--edgy {
+  border-radius: 0;
+}
+
+/*
+ * 1. Dirty hack to controll the icon position
+ * 2. Another dirty hack to make the icon take less horizontal space
+ */
+.c-btn--dropdown {
+  padding-right: $unit-small;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.c-btn--tiny {
+    padding-right: $unit-tiny;
+  }
+
+  &::after {
+    display: inline-block;
+    font-family: 'Material Icons';
+    content: 'arrow_drop_down';
+    font-size: 150%;
+    line-height: 50%;
+    /* 1 */
+    vertical-align: -50%;
+    /* 1 */
+    // margin-left: -0.3em; /* 2 */
+    margin-right: -0.3em;
+    /* 2 */
+  }
+
+  &--clearable::after {
+    display: none;
+  }
+
+  &--loader {
+    .c-spinner {
+      margin: 0px;
+    }
+  }
+
+  &--loader::after {
+    display: none;
+  }
+}
+
+/* Button Groups */
+.c-btn-group {
+  display: inline-flex;
+  vertical-align: middle;
+  border-radius: $global-radius;
+
+  .c-btn--ghost:not(:first-child) {
+    border-left-width: 0;
+  }
+}
+
+/*
+ * Button Group
+ */
+.c-btn-group > .c-btn,
+.c-btn--center {
+  border-radius: 0;
+}
+
+.c-btn-group > .c-btn:first-child,
+.c-btn--left {
+  border-radius: $global-radius 0 0 $global-radius;
+}
+
+.c-btn-group > .c-btn:last-child,
+.c-btn--right {
+  border-radius: 0 $global-radius $global-radius 0;
+}
+
+/**
+ * Button Input Combo
+ *
+ * <div class="c-btn-input">
+ *   <button class="c-btn c-btn--green c-btn--">Go</button>
+ *   <input type="text" />
+ * </div>
+ */
+
+.c-btn-input {
+  position: relative;
+
+  .c-btn {
+    position: absolute;
+    right: $unit-0;
+    top: $unit-0;
+    height: calc(100% - 8px);
+    line-height: calc(100% - 8px);
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &.c-btn-input input {
+    border-radius: $global-radius * 2;
+    padding-right: $unit-8;
+  }
+
+  .c-btn-- + input {
+    padding-right: $unit-6;
+  }
+
+  .c-btn- + input {
+    padding-right: $unit-7;
+  }
+
+  .c-btn\+ + input {
+    padding-right: $unit-9;
+  }
+}
+
+.c-btn--none,
+.c-btn--minimal {
+  &,
+  &.is-active,
+  &:active,
+  &:hover,
+  &:focus {
+    color: currentColor;
+    background-color: transparent;
+    border-width: 0;
+    box-shadow: none;
+  }
+}
+
+.c-btn--minimal {
+  opacity: 0.6;
+
+  &.is-active,
+  &:active,
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}

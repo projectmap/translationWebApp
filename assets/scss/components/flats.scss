@@ -1,0 +1,80 @@
+/* ==========================================================================
+   #FLATS
+   ========================================================================== */
+
+.c-flat {
+  border: solid $c-gray-4;
+  border-width: 1px 0 1px 0;
+}
+
+.c-flat__header,
+.c-flat__body,
+.c-flat__footer {
+  padding: $unit-small $unit;
+  border: solid $c-gray-4;
+  border-width: 0 1px 0 1px;
+}
+
+.c-flat__header {
+  background-color: $c-white;
+  border-bottom-width: 1px;
+  font-weight: bold;
+}
+
+.c-flat__footer {
+  background-color: $c-white;
+  border-top-width: 1px;
+}
+
+.c-flat__title {
+  margin-bottom: 0;
+
+  .c-flat__header--icons & {
+    padding: 0 $unit-tiny;
+  }
+}
+
+/*
+ * Size Variations
+ ******************************/
+
+.c-flat--small {
+  > * {
+    padding: $unit-tiny $unit-small;
+  }
+}
+
+.c-flat--flush {
+  > * {
+    padding: 0;
+  }
+}
+
+/*
+ * Style Variations
+ ******************************/
+
+.c-flat--primary {
+  border-top-color: $c-primary-9;
+
+  .c-flat__header {
+    color: $c-gray-1;
+    background-color: $c-primary-7;
+    border-color: $c-primary-9;
+  }
+}
+
+/*
+ * Other Variations
+ ******************************/
+
+.c-flat--round {
+  border-radius: $global-radius;
+}
+
+.c-flat--no-border {
+  &,
+  > * {
+    border-width: 0;
+  }
+}

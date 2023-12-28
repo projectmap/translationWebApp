@@ -1,0 +1,105 @@
+/* ==========================================================================
+   #ICONS
+   ========================================================================== */
+
+/* scsslint ignore: font-family-no-missing-generic-family-keyword */
+
+/*
+ * 1. Fix over width on safari
+ * 2. If it's part of a 'display: flex' element
+ */
+.u-icon {
+  display: inline-block;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  line-height: 50%;
+  letter-spacing: normal;
+  white-space: nowrap;
+  font-family: 'Material Icons';
+  font-size: 100%;
+  vertical-align: -40%;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  word-wrap: normal;
+  direction: ltr;
+  min-width: 1em; /* 1 */
+  align-self: center; /* 2 */
+}
+
+.u-icon--svg {
+  width: auto;
+  vertical-align: text-top;
+  fill: currentColor;
+
+  svg {
+    height: 1em;
+  }
+}
+
+/* Size variants
+========================================================================== */
+.u-icon\-\-\- {
+  font-size: 64%;
+  vertical-align: 0%;
+}
+
+.u-icon\-\- {
+  font-size: 64%;
+  vertical-align: 0%;
+}
+
+.u-icon\- {
+  font-size: 80%;
+  vertical-align: -25%;
+}
+
+.u-icon\+ {
+  font-size: 125%;
+  vertical-align: -50%;
+}
+
+.u-icon\+\+ {
+  font-size: 150%;
+  vertical-align: -58%;
+}
+
+.u-icon\+\+\+ {
+  font-size: 200%;
+  vertical-align: -70%;
+}
+
+/* Orientation variants
+========================================================================== */
+.u-icon--90deg {
+  transform: rotate(90deg);
+}
+
+.u-icon--45deg {
+  transform: rotate(45deg);
+}
+
+/* Animations
+========================================================================== */
+.u-icon--rotating {
+  line-height: 0.3em;
+  animation: 1s rotate infinite;
+}
+
+.u-icon--move,
+.u-icon--lmove {
+  transition: transform $global-transition;
+}
+
+:hover {
+  > .u-icon--move {
+    transform: translateX($unit-tiny);
+  }
+  > .u-icon--lmove {
+    transform: translateX(-$unit-tiny);
+  }
+}
+
+.u-icon--green {
+  color: green;
+}

@@ -1,0 +1,87 @@
+/* ==========================================================================
+   #STEPS
+   ========================================================================== */
+
+.c-steps {
+  display: inline-flex;
+
+  --color: #{$c-gray-5};
+  --dot: #{$c-white};
+  --unit: #{$unit-small};
+
+  &--small {
+    --unit: #{$unit-tiny};
+  }
+}
+
+.c-steps__item {
+  position: relative;
+  padding: 0 var(--unit);
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    width: $unit-small;
+    height: $unit-small;
+    background-color: var(--dot);
+    // background-color: $c-green-1;
+    border-radius: var(--unit);
+    vertical-align: 0;
+    border: 2px solid var(--color);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    height: 2px;
+    background-color: var(--color);
+    left: 0;
+    width: calc(var(--unit) * 2 + #{$unit-small});
+    // right: 0;
+    top: calc(50% - 1px);
+  }
+
+  &:first-child {
+    padding-left: 0;
+
+    &::after {
+      width: calc(var(--unit) + #{$unit-small});
+    }
+  }
+
+  &:last-child {
+    padding-right: 0;
+
+    &::after {
+      width: calc(var(--unit) + #{$unit-small});
+    }
+  }
+
+  &.is-active {
+    --color: #{$c-yellow-6};
+    --dot: #{$c-yellow-1};
+  }
+
+  &.is-done {
+    --color: #{$c-green-5};
+    --dot: #{$c-green-1};
+  }
+}
+
+/*
+ * 1. Correcting the font's vertical positioning
+ */
+.c-steps__label {
+  position: relative;
+  z-index: 1;
+  margin-left: $unit-tiny;
+  padding: 0 $unit-small;
+  // background-color: $c-white;
+  margin-top: -0.2em; /* 1 */
+  // color: $c-text;
+}

@@ -1,0 +1,222 @@
+/* ==========================================================================
+   #SEGMENTS
+   ========================================================================== */
+
+$c-edit: $c-primary-7;
+$c-edit-text: $c-primary-2;
+$c-compare: $c-gray-9;
+$c-compare-text: $c-gray-7;
+
+/**
+ * Segment
+ *
+ * 1. Let the border overlap 1px on the right
+ */
+.c-segment {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  transition: background-color $global-transition;
+  border: 1px solid #dee0e1;
+  // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+
+  &:hover,
+  &.is-current {
+    z-index: 1;
+  }
+
+  &.is-current {
+    z-index: 2;
+    background-color: #f9f8f9;
+
+    .c-segment__content-inner {
+      &.--sentence-content {
+        background-color: white;
+      }
+
+      &.is-current-sentence {
+        background-color: #f9f8f9;
+      }
+    }
+  }
+}
+
+.c-segment__header {
+  height: 45px;
+  padding: 0 15px;
+  background: #f9f8f9;
+  width: 100%;
+  border-bottom: 1px solid #dee0e1;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.c-segment__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/**
+ * Toolbar
+ */
+.c-toolbar {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+}
+
+/**
+ * Source & Translation
+ */
+@media (max-width: 576px) {
+  .c-source,
+  .c-translation {
+    position: relative;
+    width: 100% !important;
+    max-height: 200px;
+    overflow: scroll;
+  }
+
+  .c-translation {
+    padding-left: 25px !important;
+  }
+}
+
+.c-segment__content {
+  width: 100%;
+  padding: 0;
+
+  .c-segment__content-inner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 15px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #dee0e1;
+    }
+
+    &.--single-panel {
+      .c-translation__text {
+        width: 100%;
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+.c-source,
+.c-translation {
+  position: relative;
+  width: 50%;
+}
+
+.c-source {
+  padding: $unit-small $unit $unit-tiny;
+}
+
+.c-translation {
+  padding: $unit-small $unit-small 0 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*
+ * 1. Don't overflow the container if someone enters funny long words
+ */
+.c-source__text,
+.c-translation__text,
+.c-translation__editor {
+  word-wrap: break-word;
+  /* old name for overflow-wrap */
+  overflow-wrap: break-word;
+  /* 1 */
+}
+
+.c-source__text,
+.c-translation__text {
+  width: 50%;
+}
+
+.c-translation__text {
+  margin-left: 30px;
+}
+
+.c-source__text {
+  margin-right: 30px;
+}
+
+/*
+ * 1. Editor should sit in front of dummy
+ */
+.c-translation__editor {
+  position: relative;
+  /* 1 */
+  // z-index: 1; /* 1 */
+  height: 100%;
+
+  .is-read.is-ai & {
+    color: $c-muted;
+  }
+}
+
+/*
+ * 1. Dummy should sit behind editor text
+ */
+.c-translation__dummy {
+  position: absolute;
+  /* 1 */
+  top: 0;
+  /* 1 */
+  left: 0;
+  /* 1 */
+  width: 100%;
+  /* 1 */
+  z-index: 0;
+  /* 1 */
+  padding: $unit-small $unit $unit-tiny;
+}
+
+/**
+ * CTA
+ */
+.c-center {
+  position: absolute;
+  z-index: 3;
+  left: 49%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+$lock-size: $unit * 1.5;
+
+.c-center__lock {
+  left: -$lock-size/2;
+  top: -$lock-size/2;
+  width: $lock-size;
+  height: $lock-size;
+  text-align: center;
+  line-height: $lock-size;
+  color: $c-muted;
+  border-radius: $global-radius;
+
+  > .u-icon {
+    vertical-align: -50%;
+  }
+}
+
+.c-center__interactions {
+  background-color: rgba($c-white, 0.9);
+  box-shadow: $global-shadow-1;
+  border-radius: $global-radius;
+  transition: opacity $global-transition;
+  opacity: 0;
+
+  .c-segment:hover & {
+    opacity: 1;
+  }
+}

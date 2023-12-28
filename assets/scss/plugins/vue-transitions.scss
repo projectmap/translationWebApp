@@ -1,0 +1,33 @@
+///* ========================================================================
+//   #VUE-TRANSITIONS
+//   ======================================================================== */
+
+/* Default page transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity $global-transition;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+/* <transition name="fade"> */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity $global-transition;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* <transition name="slow-fade"> */
+.slow-fade-enter-active,
+.slow-fade-leave-active {
+  transition: opacity 3s;
+}
+.slow-fade-enter,
+.slow-fade-leave-to {
+  opacity: 0;
+}

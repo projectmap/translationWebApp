@@ -1,0 +1,156 @@
+///* ========================================================================
+//   #COLORS
+//   ======================================================================== */
+
+// Grays
+// $c-white:           #fff;
+// $c-gray-1:          #fafafa;
+// $c-gray-2:          #f6f6f6;
+// $c-gray-3:          #f0f0f0;
+// $c-gray-4:          #e8e8e8;
+// $c-gray-5:          #e0e0e0;
+// $c-gray-6:          #cecece;
+// $c-gray-7:          #8e8e8e;
+// $c-gray-8:          #666;
+// $c-gray-9:          #333;
+// $c-gray-10:         #f8f8f8;
+// $c-black:           #000;
+//$c-black-1:          #272727;
+
+$c-white: #fff;
+$c-gray-1: hsl(216, 35%, 97%);
+$c-gray-2: hsl(210, 13%, 91%);
+$c-gray-3: hsl(211, 16%, 82%);
+$c-gray-4: hsl(211, 13%, 65%);
+$c-gray-5: hsl(211, 10%, 53%);
+$c-gray-6: hsl(208, 14%, 37%);
+$c-gray-7: hsl(208, 18%, 29%);
+$c-gray-8: hsl(208, 20%, 24%);
+$c-gray-9: hsl(211, 25%, 16%);
+$c-gray-10: #f8f8f8;
+$c-black: #000;
+$c-black-1: #272727;
+
+// Primary
+$c-primary-1: hsl(196, 58%, 95%);
+$c-primary-2: hsl(197, 58%, 85%);
+$c-primary-3: hsl(198, 52%, 71%);
+$c-primary-4: hsl(197, 48%, 59%);
+$c-primary-5: hsl(198, 53%, 49%);
+$c-primary-6: hsl(198, 56%, 42%);
+$c-primary-7: hsl(197, 61%, 34%);
+$c-primary-8: hsl(197, 66%, 26%);
+$c-primary-9: hsl(198, 75%, 19%);
+
+$c-primary-backgound-1: #c4efff;
+
+// Supporting
+$c-blue-1: hsl(211, 100%, 98%);
+$c-blue-2: hsl(213, 77%, 90%);
+$c-blue-3: hsl(215, 73%, 77%);
+$c-blue-4: hsl(216, 68%, 58%);
+$c-blue-5: hsl(219, 82%, 44%);
+$c-blue-6: hsl(224, 86%, 36%);
+$c-blue-7: hsl(228, 90%, 30%);
+$c-blue-8: hsl(233, 91%, 24%);
+$c-blue-9: hsl(238, 98%, 17%);
+
+$c-green-1: hsl(115, 72%, 95%);
+$c-green-2: hsl(118, 66%, 82%);
+$c-green-3: hsl(114, 53%, 70%);
+$c-green-4: hsl(113, 43%, 56%);
+$c-green-4a: hsl(118, 74%, 43%);
+$c-green-5: hsl(115, 43%, 40%);
+$c-green-6: hsl(115, 47%, 29%);
+$c-green-7: hsl(116, 56%, 26%);
+$c-green-8: hsl(117, 73%, 20%);
+$c-green-9: hsl(117, 86%, 14%);
+
+$c-red-1: hsl(6, 100%, 95%);
+$c-red-2: hsl(4, 83%, 89%);
+$c-red-3: hsl(4, 82%, 75%);
+$c-red-4: hsl(4, 81%, 62%);
+$c-red-5: hsl(4, 80%, 50%);
+$c-red-6: hsl(5, 83%, 38%);
+$c-red-7: hsl(5, 86%, 32%);
+$c-red-8: hsl(5, 90%, 25%);
+$c-red-9: hsl(5, 95%, 20%);
+
+$c-yellow-1: hsl(48, 100%, 95%);
+$c-yellow-2: hsl(47, 100%, 88%);
+$c-yellow-3: hsl(46, 95%, 76%);
+$c-yellow-4: hsl(44, 92%, 68%);
+$c-yellow-4a: hsl(47, 91%, 50%);
+$c-yellow-5: hsl(38, 87%, 55%);
+$c-yellow-5a: hsl(37, 79%, 51%);
+$c-yellow-6: hsl(34, 77%, 49%);
+$c-yellow-7: hsl(28, 80%, 44%);
+$c-yellow-8: hsl(22, 82%, 39%);
+$c-yellow-9: hsl(19, 86%, 28%);
+
+$c-purple-1: hsl(260, 60%, 95%);
+$c-purple-2: hsl(262, 67%, 84%);
+$c-purple-3: hsl(262, 54%, 68%);
+$c-purple-4: hsl(262, 47%, 58%);
+$c-purple-5: hsl(262, 49%, 45%);
+$c-purple-6: hsl(263, 60%, 38%);
+$c-purple-7: hsl(262, 69%, 31%);
+$c-purple-8: hsl(262, 73%, 25%);
+$c-purple-9: hsl(263, 85%, 18%);
+
+$c-info-1: hsl(188, 78%, 95%);
+$c-info-2: hsl(188, 78%, 84%);
+$c-info-3: hsl(188, 78%, 68%);
+$c-info-4: hsl(188, 78%, 58%);
+$c-info-5: hsl(188, 78%, 45%);
+$c-info-6: hsl(188, 78%, 38%);
+$c-info-7: hsl(188, 78%, 31%);
+$c-info-8: hsl(188, 78%, 25%);
+$c-info-9: hsl(188, 78%, 18%);
+
+$c-pink-1: hsl(281, 79%, 62%);
+
+// Theeming
+$c-text: $c-gray-8;
+$c-muted: rgba($c-gray-8, 0.5);
+$c-border: $c-gray-3;
+$c-link: $c-primary-5;
+$c-link-hover: $c-primary-8;
+$c-dark: rgba($c-gray-8, 0.65);
+
+// Backgrounds
+@mixin background($color: 'primary', $pattern: true) {
+  $gradient1: linear-gradient(132deg, $c-gray-9, $c-gray-7);
+  $gradient2: linear-gradient(
+    32deg,
+    rgba($c-primary-3, 0.5),
+    rgba($c-gray-7, 0),
+    rgba($c-primary-8, 0.5)
+  );
+
+  @if ($color == 'primary') {
+    $gradient1: linear-gradient(132deg, $c-primary-7, $c-primary-5);
+  }
+
+  @if ($pattern) {
+    background-size: cover;
+    background-blend-mode: multiply, overlay, overlay;
+    background-image: linear-gradient(
+        0deg,
+        rgba($c-black, 0.1),
+        rgba($c-black, 0) 10%,
+        transparent
+      ),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1280' height='800' viewBox='0 0 1280 800'%3E%3Cpath fill='%23FFF' d='M1280 554.474L0 26.033V800h1280z' opacity='.1'/%3E%3Cpath d='M156.844 800H1280V0H487.118z' opacity='.07'/%3E%3C/svg%3E"),
+      $gradient2, $gradient1;
+  } @else {
+    background-blend-mode: multiply, overlay, overlay;
+    background-image: linear-gradient(
+        0deg,
+        rgba($c-black, 0.1),
+        rgba($c-black, 0) 10%,
+        transparent
+      ),
+      $gradient2, $gradient1;
+  }
+}

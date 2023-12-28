@@ -1,0 +1,120 @@
+/* ==========================================================================
+   #USER
+   ========================================================================== */
+
+.c-user {
+  line-height: 1.2;
+  white-space: nowrap;
+  display: inline-block;
+  cursor: inherit;
+
+  &--card {
+    padding: $unit-small;
+    text-align: left;
+  }
+}
+
+.c-user__avatar,
+.c-user__name,
+.c-user__badge {
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.c-user__avatar {
+  display: inline-block;
+  line-height: 1;
+  width: 1em;
+
+  .c-user--card & {
+    width: 4em;
+  }
+
+  .c-user--large & {
+    width: 1.5em;
+  }
+
+  > img {
+    border-radius: $global-radius;
+    background-color: $c-muted;
+    vertical-align: -0.2em;
+
+    .c-user--large & {
+      vertical-align: -0.4em;
+    }
+  }
+}
+
+.c-user__name {
+  font-weight: 600;
+  color: currentcolor;
+}
+
+a.c-user__name:hover,
+a.c-user__name:focus {
+  color: currentcolor;
+  text-decoration: underline;
+}
+
+.c-user__meta {
+  color: $c-muted;
+}
+
+.c-user__pill {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: smaller;
+  line-height: 1.2;
+  border-radius: 100px;
+  padding: 0 0.4em;
+  background-color: $c-white;
+
+  .is-beginner & {
+    background-color: $c-yellow-1;
+    color: $c-yellow-9;
+  }
+
+  .is-translator & {
+    background-color: $c-primary-1;
+    color: $c-primary-7;
+  }
+
+  .is-reviewer & {
+    background-color: $c-green-1;
+    color: $c-green-7;
+  }
+
+  .is-expert & {
+    background-color: $c-purple-1;
+    color: $c-purple-7;
+  }
+}
+
+.c-user__points {
+  color: $c-green-5;
+
+  &::before {
+    content: '\2022\0020';
+  }
+}
+
+.c-user__label {
+  text-transform: uppercase;
+  font-size: smaller;
+  margin-top: $unit-5;
+}
+
+// .c-user__action {
+// }
+
+// .c-user__time {
+// }

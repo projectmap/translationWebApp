@@ -1,0 +1,28 @@
+/* ==========================================================================
+   #BLIND-TEXT
+   ========================================================================== */
+
+/*
+ * 1. round cornes on all lines
+ */
+.u-blind-text {
+  background-color: $c-gray-3;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone; /* 1 */
+  box-decoration-break: clone; /* 1 */
+
+  &.is-loading {
+    @include preloader-background;
+  }
+
+  &,
+  a,
+  a:hover {
+    color: transparent !important;
+    cursor: text;
+  }
+
+  &::selection {
+    background-color: transparent;
+  }
+}

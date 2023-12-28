@@ -1,0 +1,75 @@
+/* ==========================================================================
+   #FOMRS
+   ========================================================================== */
+
+form {
+  legend {
+    color: $c-border;
+  }
+
+  label {
+    font-weight: bold;
+    // margin-right: $unit-small;
+  }
+
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+}
+
+fieldset {
+  border: 1px solid $c-border;
+  border-radius: $global-radius;
+  padding: $unit-small $unit $unit;
+}
+
+input,
+textarea,
+select,
+.e-input {
+  transition: border-color $global-transition !important;
+  border: 1px solid $c-border !important;
+  border-radius: $global-radius !important;
+  background-color: $c-white !important;
+  padding: $unit-tiny $unit-small !important;
+  color: $c-text !important;
+  font: inherit !important;
+  font-weight: 300 !important;
+  width: 100% !important;
+  line-height: 1.2 !important;
+
+  &::placeholder {
+    color: $c-gray-7;
+  }
+  &::-webkit-input-placeholder {
+    color: $c-gray-7;
+  }
+  &:-ms-input-placeholder {
+    color: $c-gray-7;
+  }
+
+  &:focus {
+    border-color: $c-primary-5;
+  }
+
+  &:disabled,
+  &.e-input--disabled {
+    background-color: $c-gray-2;
+    opacity: 0.8;
+  }
+
+  // &[type="text"],
+  // &[type="tel"],
+  // &[type="number"] {
+  //     width: 100%;
+  // }
+
+  &[type='radio'],
+  &[type='checkbox'] {
+    cursor: pointer;
+    width: unset;
+    vertical-align: 10%;
+    margin-right: $unit-tiny;
+  }
+}

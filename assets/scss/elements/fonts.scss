@@ -1,0 +1,165 @@
+/* ==========================================================================
+   #FONTS
+   ========================================================================== */
+
+/* Limited character sets for UI:
+ * 300, 700
+ ************************************************************/
+
+/* source-sans-pro-300 - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('@/static/fonts/source-sans-pro-v11-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'),
+    url('@/static/fonts/source-sans-pro-v11-latin-300.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('@/static/fonts/source-sans-pro-v11-latin-300.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('@/static/fonts/source-sans-pro-v11-latin-300.woff') format('woff'),
+    /* Modern Browsers */
+      url('@/static/fonts/source-sans-pro-v11-latin-300.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+      url('@/static/fonts/source-sans-pro-v11-latin-300.svg#SourceSansPro')
+      format('svg'); /* Legacy iOS */
+}
+
+/* source-sans-pro-700 - latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('@/static/fonts/source-sans-pro-v11-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
+    url('@/static/fonts/source-sans-pro-v11-latin-700.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('@/static/fonts/source-sans-pro-v11-latin-700.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/source-sans-pro-v11-latin-700.woff')
+      format('woff'),
+    /* Modern Browsers */
+      url('@/static/fonts/source-sans-pro-v11-latin-700.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+      url('@/static/fonts/source-sans-pro-v11-latin-700.svg#SourceSansPro')
+      format('svg'); /* Legacy iOS */
+}
+
+/* Icon Font
+ ************************************************************/
+
+/* Material Icons */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('Material Icons Regular'),
+    url('@/static/fonts/material-icons-regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('@/static/fonts/material-icons-regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('@/static/fonts/material-icons-regular.woff') format('woff'),
+    /* Modern Browsers */ url('@/static/fonts/material-icons-regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('@/static/fonts/material-icons-regular.svg#SourceSansPro')
+      format('svg'); /* Legacy iOS */
+}
+
+/* Extended character sets for multi-language support:
+ * 400, 400i, 600
+ *
+ * INFO: These fonts are imported directly from fonts.google.com
+ *       See nuxt.conf.js under 'meta'
+ *
+ ************************************************************/
+
+/* source-sans-pro-regular - latin_cyrillic_greek_latin-ext */
+// @font-face {
+//   font-family: 'Source Sans Pro';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-regular.eot'); /* IE9 Compat Modes */
+//   src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-regular.woff2') format('woff2'), /* Super Modern Browsers */
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-regular.woff') format('woff'), /* Modern Browsers */
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-regular.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+// }
+
+/* source-sans-pro-italic - latin_cyrillic_greek_latin-ext */
+// @font-face {
+//   font-family: 'Source Sans Pro';
+//   font-style: italic;
+//   font-weight: 400;
+//   src: url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-italic.eot'); /* IE9 Compat Modes */
+//   src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'),
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-italic.woff2') format('woff2'), /* Super Modern Browsers */
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-italic.woff') format('woff'), /* Modern Browsers */
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-italic.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+// }
+
+/* source-sans-pro-600 - latin_cyrillic_greek_latin-ext */
+// @font-face {
+//   font-family: 'Source Sans Pro';
+//   font-style: normal;
+//   font-weight: 600;
+//   src: url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-600.eot'); /* IE9 Compat Modes */
+//   src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'),
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-600.woff2') format('woff2'), /* Super Modern Browsers */
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-600.woff') format('woff'), /* Modern Browsers */
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-600.ttf') format('truetype'), /* Safari, Android, iOS */
+//        url('/fonts/source-sans-pro-v11-latin_cyrillic_greek_latin-ext-600.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+// }
+
+/* Language support for Myanmar and myanmar rendered minority languages
+ * 400, 700
+ ************************************************************/
+/* padauk-regular - myanmar_latin */
+@font-face {
+  font-family: 'Padauk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('@/static/fonts/padauk-v5-myanmar_latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''), local('Padauk-Regular'),
+    url('@/static/fonts/padauk-v5-myanmar_latin-regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('@/static/fonts/padauk-v5-myanmar_latin-regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('@/static/fonts/padauk-v5-myanmar_latin-regular.woff') format('woff'),
+    /* Modern Browsers */
+      url('@/static/fonts/padauk-v5-myanmar_latin-regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/@/static@staticfonts/padauk-v5-myanmar_latin-regular.svg#Padauk')
+      format('svg'); /* Legacy iOS */
+}
+/* padauk-700 - myanmar_latin */
+@font-face {
+  font-family: 'Padauk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('@/static/fonts/padauk-v5-myanmar_latin-700.eot'); /* IE9 Compat Modes */
+  src: local(' '), local('Padauk-Bold'),
+    url('@/static/fonts/padauk-v5-myanmar_latin-700.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('@/static/fonts/padauk-v5-myanmar_latin-700.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('@/static/fonts/padauk-v5-myanmar_latin-700.woff') format('woff'),
+    /* Modern Browsers */ url('@/static/fonts/padauk-v5-myanmar_latin-700.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('@/static/fonts/padauk-v5-myanmar_latin-700.svg#Padauk') format('svg'); /* Legacy iOS */
+}

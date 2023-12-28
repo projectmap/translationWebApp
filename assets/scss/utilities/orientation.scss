@@ -1,0 +1,65 @@
+/* ==========================================================================
+   #ORIENTATIONS
+   ========================================================================== */
+
+/**
+ * orient content of a block
+ *
+ *   <div class="u-center u-right"></div>
+ */
+
+$orientations: (
+  'center': (
+    'center',
+    'center',
+  ),
+  'top': (
+    'flex-start',
+    '',
+  ),
+  'right': (
+    '',
+    'flex-end',
+  ),
+  'bottom': (
+    'flex-end',
+    '',
+  ),
+  'left': (
+    '',
+    'flex-start',
+  ),
+) !default;
+
+$selector: ();
+@each $name, $value in $orientations {
+  $selector: append($selector, '.u-#{$name}', 'comma');
+}
+
+.u-flex,
+#{$selector} {
+  display: flex !important;
+}
+
+#{$selector} {
+  flex-direction: column;
+}
+
+@each $name, $value in $orientations {
+  .u-#{$name} {
+    @if nth($value, 1) != '' {
+      align-items: #{nth($value, 1)} !important;
+    }
+    @if nth($value, 2) != '' {
+      justify-content: #{nth($value, 2)} !important;
+    }
+  }
+}
+
+.u-flex {
+  align-items: center;
+
+  &--space-between {
+    justify-content: space-between;
+  }
+}

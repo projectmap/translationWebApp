@@ -1,0 +1,42 @@
+/* ==========================================================================
+   #DOT
+   ========================================================================== */
+
+.c-dot {
+  display: inline-block;
+  width: $unit-small;
+  height: $unit-small;
+  color: $c-gray-5;
+  background-color: currentcolor;
+  border-radius: $unit-small;
+  vertical-align: -5%;
+  border: 2px solid $c-gray-2;
+
+  /*
+     * Color Variations
+     **************************/
+
+  &--light {
+    color: $c-white;
+  }
+
+  &--dark {
+    color: $c-dark;
+  }
+
+  &--green {
+    color: $c-green-5;
+  }
+
+  &--yellow {
+    color: $c-yellow-5;
+  }
+
+  &--red {
+    color: $c-red-5;
+  }
+
+  &--blue {
+    color: $c-primary-5;
+  }
+}

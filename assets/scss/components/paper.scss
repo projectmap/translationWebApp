@@ -1,0 +1,43 @@
+/* ==========================================================================
+   #PAPER
+   ========================================================================== */
+
+$c-line: #d9eaf3;
+$c-left-border: #efe4e4;
+
+.c-paper {
+  --line-height: #{$line-height};
+
+  position: relative;
+  background-color: hsl(40, 16%, 98%);
+  background-image: linear-gradient($c-line 5%, transparent 5%);
+  background-size: 100% var(--line-height);
+  background-position-y: calc(#{$unit-tiny} - var(--line-height) * 0.225);
+  cursor: text;
+  border-radius: $global-radius;
+  box-shadow: 0 0 0 1px hsl(40, 15%, 85%) inset,
+    0 0 12px hsl(40, 15%, 85%) inset;
+
+  &--h1 {
+    --line-height: #{$inuit-font-size-h1 * 1.35};
+  }
+
+  &--h2 {
+    --line-height: #{$inuit-font-size-h2 * 1.35};
+  }
+
+  &--h3 {
+    --line-height: #{$inuit-font-size-h3 * 1.35};
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    top: 0;
+    left: $unit-small;
+    bottom: 0;
+    border: 1px solid;
+    border-color: transparent $c-left-border;
+  }
+}

@@ -1,0 +1,90 @@
+/* ==========================================================================
+   #TOOLTIP
+   ========================================================================== */
+
+$arrow: 8px;
+$background: $c-gray-1;
+
+.c-tooltip-anchor {
+  cursor: help;
+}
+
+/**
+ * 1. Remove from layout during rendering before 'hydrtion'
+ */
+.c-tooltip {
+  position: absolute; /* 1 */
+  display: block !important;
+  z-index: 10000;
+
+  &[aria-hidden='true'] {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity $global-transition, visibility $global-transition;
+  }
+
+  &[aria-hidden='false'] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity $global-transition;
+  }
+}
+
+.c-tooltip__wrapper {
+  position: relative;
+}
+
+/*
+ * 1. Unset `white-space: nowrap` from badges for example
+ */
+.c-tooltip__inner {
+  @include inuit-font-size($font-size-small);
+
+  text-align: center !important;
+  background-color: $background !important;
+  border-radius: $global-radius !important;
+  box-shadow: 0 3px 40px rgba(0, 0, 0, 0.3) !important;
+  max-width: $unit * 16 !important;
+  padding: $unit-tiny $unit-small !important;
+  color: $c-text !important;
+  font-weight: normal !important;
+  white-space: normal !important; /* 1 */
+
+  .c-tooltip--wide & {
+    max-width: $unit * 32;
+
+    @include mq($until: tablet) {
+      max-width: 90vw;
+    }
+  }
+}
+
+.c-tooltip__arrow {
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - #{$arrow});
+  left: calc(50% - #{$arrow});
+  z-index: 99;
+  border: $arrow solid transparent;
+  content: '';
+
+  .c-tooltip[x-placement^='top'] & {
+    top: 100%;
+    border-top-color: $background;
+  }
+
+  .c-tooltip[x-placement^='right'] & {
+    left: -$arrow * 2;
+    border-right-color: $background;
+  }
+
+  .c-tooltip[x-placement^='bottom'] & {
+    top: -$arrow * 2;
+    border-bottom-color: $background;
+  }
+
+  .c-tooltip[x-placement^='left'] & {
+    left: 100%;
+    border-left-color: $background;
+  }
+}

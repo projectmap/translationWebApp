@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Amharic",
+    "iso": "am",
+    "entityId": 869489,
+    "roomId": "wtfsrYSqFFnHHIRtVo"
+  },
+  {
+    "name": "Afrikaans",
+    "iso": "af",
+    "entityId": 870368,
+    "roomId": "TKNvXonRzxGIAGzkDm"
+  },
+  {
+    "name": "Arabic",
+    "iso": "ar",
+    "entityId": 870371,
+    "roomId": "YXGsXILNaanrGoHmPA"
+  },
+  {
+    "name": "Armenian",
+    "iso": "hy",
+    "entityId": 870374,
+    "roomId": "NInxDUrhAcLJWbScOc"
+  },
+  {
+    "name": "Bengali",
+    "iso": "bn",
+    "entityId": 870377,
+    "roomId": "WDkINMwGCUAItECCEi"
+  },
+  {
+    "name": "Bulgarian",
+    "iso": "bg",
+    "entityId": 870380,
+    "roomId": "XioMcVobohFrHohRAQ"
+  },
+  {
+    "name": "Burmese",
+    "iso": "my",
+    "entityId": 870383,
+    "roomId": "CvGhTeixBwCcEYBheQ"
+  },
+  {
+    "name": "Chinese",
+    "iso": "zh",
+    "entityId": 870386,
+    "roomId": "TwQKkifVYsnuaAPeSw"
+  },
+  {
+    "name": "Croatian",
+    "iso": "hr",
+    "entityId": 870389,
+    "roomId": "SAolbqvGEetXqIpihI"
+  },
+  {
+    "name": "Czech",
+    "iso": "cs",
+    "entityId": 870392,
+    "roomId": "miBrtlEcYgLpmLGaTd"
+  },
+  {
+    "name": "Danish",
+    "iso": "da",
+    "entityId": 870395,
+    "roomId": "vqrqeFZbyRyBVAQllV"
+  },
+  {
+    "name": "Dutch",
+    "iso": "nl",
+    "entityId": 870398,
+    "roomId": "IviZryYGXzkSeOKMDU"
+  },
+  {
+    "name": "Farsi",
+    "iso": "fa",
+    "entityId": 870401,
+    "roomId": "kdDNtqjDTijIoYiTUH"
+  },
+  {
+    "name": "Finnish",
+    "iso": "fi",
+    "entityId": 870407,
+    "roomId": "ysCfWJvhMBkBWLbBwh"
+  },
+  {
+    "name": "French",
+    "iso": "fr",
+    "entityId": 870410,
+    "roomId": "oeiviVxmeudXRVxPIS"
+  },
+  {
+    "name": "Garo",
+    "iso": "grt",
+    "entityId": 870413,
+    "roomId": "lWcZosbEfdacPsUzts"
+  },
+  {
+    "name": "German",
+    "iso": "de",
+    "entityId": 870416,
+    "roomId": "jyoBmVsFjovWoBSeOm"
+  },
+  {
+    "name": "Hindi",
+    "iso": "hi",
+    "entityId": 870419,
+    "roomId": "PytvapzzoCZozMMHee"
+  },
+  {
+    "name": "Hungarian",
+    "iso": "hu",
+    "entityId": 870422,
+    "roomId": "DUqEsOtObJEemQTIQl"
+  },
+  {
+    "name": "Icelandic",
+    "iso": "is",
+    "entityId": 870425,
+    "roomId": "ZZvAnNnkOrYltYUwoN"
+  },
+  {
+    "name": "Ilocano",
+    "iso": "ilo",
+    "entityId": 870428,
+    "roomId": "cQgymIQYVRSfHsrklO"
+  },
+  {
+    "name": "Indonesian",
+    "iso": "entityId",
+    "entityId": 870431,
+    "roomId": "qQJFDDEuCafCHBSkYN"
+  },
+  {
+    "name": "Italian",
+    "iso": "it",
+    "entityId": 870434,
+    "roomId": "nmjrAQMJzdyKcjXDOg"
+  },
+  {
+    "name": "Japanese",
+    "iso": "ja",
+    "entityId": 870437,
+    "roomId": "GtPHFFKeKCmGLXXrMF"
+  },
+  {
+    "name": "Khasi",
+    "iso": "kha",
+    "entityId": 870440,
+    "roomId": "kvSgcCWluTVoMyUhPr"
+  },
+  {
+    "name": "Kinyarwanda",
+    "iso": "rw",
+    "entityId": 870443,
+    "roomId": "CnBSTWvSBRUBgfnvff"
+  },
+  {
+    "name": "Korean",
+    "iso": "ko",
+    "entityId": 870446,
+    "roomId": "njuPTxNVxnjgoutThj"
+  },
+  {
+    "name": "Latvian",
+    "iso": "lv",
+    "entityId": 870449,
+    "roomId": "wvOoirbDFgaaELdjML"
+  },
+  {
+    "name": "Lithuanian",
+    "iso": "lt",
+    "entityId": 870452,
+    "roomId": "gZbvxWcsEdigxogdop"
+  },
+  {
+    "name": "Macedonian",
+    "iso": "mk",
+    "entityId": 870458,
+    "roomId": "MNFykwbAuiZhNkMXzn"
+  },
+  {
+    "name": "Malagasy",
+    "iso": "mg",
+    "entityId": 870461,
+    "roomId": "QnRMSbLLeWujfztVIR"
+  },
+  {
+    "name": "Malay",
+    "iso": "ms",
+    "entityId": 870464,
+    "roomId": "uBYJyvCiDaqNfoOGYq"
+  },
+  {
+    "name": "Marathi",
+    "iso": "mr",
+    "entityId": 870467,
+    "roomId": "QfzddIuwOpEGGedjkS"
+  },
+  {
+    "name": "Mizo (Lushai)",
+    "iso": "lus",
+    "entityId": 870470,
+    "roomId": "RVXOEkigwOmfNNePxT"
+  },
+  {
+    "name": "Norwegian",
+    "iso": "nb",
+    "entityId": 870473,
+    "roomId": "UJlnhMWNrGiknvUtDD"
+  },
+  {
+    "name": "Panayan",
+    "iso": "hil",
+    "entityId": 870476,
+    "roomId": "wIzRhYDSOHCqaZUTeG"
+  },
+  {
+    "name": "Polish",
+    "iso": "pl",
+    "entityId": 870479,
+    "roomId": "bpjSVqeXtnIWJWXugS"
+  },
+  {
+    "name": "Portuguese",
+    "iso": "pt",
+    "entityId": 870482,
+    "roomId": "dKlMmIxHmXPoFKaRIQ"
+  },
+  {
+    "name": "Romanian",
+    "iso": "ro",
+    "entityId": 870485,
+    "roomId": "lXjngnldPsKoWDnQBy"
+  },
+  {
+    "name": "Russian",
+    "iso": "ru",
+    "entityId": 870488,
+    "roomId": "xCCjewzUKxRIyuCprB"
+  },
+  {
+    "name": "Serbian",
+    "iso": "sr",
+    "entityId": 870491,
+    "roomId": "vslurJdtZYSSWyYrmo"
+  },
+  {
+    "name": "Slovak",
+    "iso": "sk",
+    "entityId": 870494,
+    "roomId": "GQBXnpwpqNTHqWzUKx"
+  },
+  {
+    "name": "Swedish",
+    "iso": "sv",
+    "entityId": 870497,
+    "roomId": "pQAoSYEbtwdcCviNjk"
+  },
+  {
+    "name": "Tagalog",
+    "iso": "tl",
+    "entityId": 870500,
+    "roomId": "ZwAWabFlDFvexDnVdv"
+  },
+  {
+    "name": "Tamil",
+    "iso": "ta",
+    "entityId": 870503,
+    "roomId": "vXfkwMuTNAyGwMcBTh"
+  },
+  {
+    "name": "Telugu",
+    "iso": "te",
+    "entityId": 870506,
+    "roomId": "EVLtDDxIWIxaLUNttJ"
+  },
+  {
+    "name": "Thai",
+    "iso": "th",
+    "entityId": 870509,
+    "roomId": "shZteHUYGpoXNWXitZ"
+  },
+  {
+    "name": "Turkish",
+    "iso": "tr",
+    "entityId": 870512,
+    "roomId": "gYiedbbBvnSQCkVndI"
+  },
+  {
+    "name": "Berber",
+    "iso": "ber",
+    "entityId": 876424,
+    "roomId": "gFvyRcziSBMCxmycRS"
+  },
+  {
+    "name": "Central Kurdish",
+    "iso": "ckb",
+    "entityId": 876427,
+    "roomId": "skrDngZUmDMAQaaEhM"
+  },
+  {
+    "name": "Persian",
+    "iso": "fa",
+    "entityId": 876430,
+    "roomId": "HZUEllPjqLEbBTUGEi"
+  },
+  {
+    "name": "S’gaw Karen",
+    "iso": "ksw",
+    "entityId": 876433,
+    "roomId": "URnpIDXLbhyGudOsJx"
+  },
+  {
+    "name": "Sinhala",
+    "iso": "si",
+    "entityId": 876436,
+    "roomId": "mlDQgbxAaGhWZNeUNH"
+  },
+  {
+    "name": "Spanish",
+    "iso": "es",
+    "entityId": 876439,
+    "roomId": "hsireviwESVjkBwQfG"
+  },
+  {
+    "name": "Swahili",
+    "iso": "sw",
+    "entityId": 876442,
+    "roomId": "CbKVsHwjuGHHZrPDVy"
+  },
+  {
+    "name": "Tonga",
+    "iso": "toi",
+    "entityId": 875945,
+    "roomId": "exhkRJdFFWfTMTeekY"
+  },
+  {
+    "name": "Tongan",
+    "iso": "ton",
+    "entityId": 875948,
+    "roomId": "XEqeRTuYEuFFqYkAka"
+  },
+  {
+    "name": "Ukrainian",
+    "iso": "uk",
+    "entityId": 870515,
+    "roomId": "WvZojgzCZVMABRrQGB"
+  },
+  {
+    "name": "Urdu",
+    "iso": "ur",
+    "entityId": 870518,
+    "roomId": "GPvtkPewvgTuEafzsD"
+  },
+  {
+    "name": "Vietnamese",
+    "iso": "vi",
+    "entityId": 870521,
+    "roomId": "HTgjTmipRxUTTkfIGR"
+  }
+]

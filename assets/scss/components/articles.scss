@@ -1,0 +1,92 @@
+/* ==========================================================================
+   #ARTICLES
+   ========================================================================== */
+
+.c-article {
+  padding-top: $unit-large;
+  padding-bottom: $unit-large;
+  max-width: 40em;
+
+  // :last-child {
+  //     margin-bottom: 0;
+  // }
+
+  h1 {
+    font-weight: lighter;
+  }
+
+  h2 {
+    border-bottom: 1px solid $c-border;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-weight: bold;
+  }
+
+  a:not(.c-btn):hover,
+  a:not(.c-btn):focus {
+    border-bottom: 1px dotted currentcolor;
+  }
+
+  blockquote {
+    padding-left: $unit-small;
+    color: $c-muted;
+    border-left: 3px solid $c-border;
+  }
+
+  table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    // margin: 0;
+    // overflow: hidden;
+
+    td,
+    th {
+      min-width: 1em;
+      border: 2px solid $c-border;
+      padding: $unit-1 $unit-2;
+      vertical-align: top;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      position: relative;
+
+      > * {
+        margin-bottom: 0;
+      }
+    }
+
+    th {
+      font-weight: 700;
+      text-align: left;
+    }
+  }
+
+  /*
+     * Top padding when jumping to elements with id
+     */
+  :target::before {
+    content: '';
+    display: block;
+    height: $unit-8; /* fixed header height*/
+    margin-top: -$unit-8; /* negative fixed header height */
+  }
+
+  /*
+     * Prosemirror
+     */
+  p.is-empty:first-child:before {
+    content: attr(data-empty-text);
+    float: left;
+    color: $c-gray-7;
+    font-weight: 300;
+    pointer-events: none;
+    height: 0;
+  }
+
+  li > p {
+    margin-bottom: 0.1em;
+  }
+}

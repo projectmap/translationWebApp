@@ -1,0 +1,244 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+/* Spacing Units */
+$unit: $inuit-global-spacing-unit;
+
+$unit-0: calc($unit / 6); //   4px
+$unit-1: calc($unit / 4); //   6px
+$unit-2: calc($unit / 3); //   8px
+$unit-3: calc($unit / 2); //  12px
+$unit-4: calc($unit / 1.5); //  16px
+$unit-5: $unit; //  24px
+$unit-6: $unit * 1.5; //  32px
+$unit-7: $unit * 2; //  48px
+$unit-8: $unit * 3; //  64px
+$unit-9: $unit * 4; //  96px
+$unit-10: $unit * 6; // 144px
+
+$unit-tiny: $unit-1;
+$unit-small: $unit-3;
+$unit-large: $unit-7;
+$unit-huge: $unit-9;
+
+// Fonts
+$font-primary: 'Noto Sans', 'Source Sans Pro', 'Open Sans', 'Padauk', sans-serif;
+$font-size-hugest: 36px; // x 2.25
+$font-size-huger: 30px; // x 1.875
+$font-size-huge: 24px; // x 1.5
+$font-size-large: 20px; // x 1.25
+$font-size: 16px; // x 1
+$font-size-small: 14px; // x 0.825
+$font-size-tiny: 12px; // x 0.75
+$font-size-tinier: 10px; // x 0.625
+$font-size-tiniest: 9px; // x 0.5625
+$font-size-9: 36px; // x 2.25
+$font-size-8: 30px; // x 1.875
+$font-size-7: 24px; // x 1.5
+$font-size-6: 20px; // x 1.25
+$font-size-5: 16px; // x 1
+$font-size-4: 14px; // x 0.825
+$font-size-3: 12px; // x 0.75
+$font-size-2: 10px; // x 0.625
+$font-size-1: 9px; // x 0.5625
+$font-size-0: 8px; // x 0.5
+$line-height: $inuit-global-line-height; // 24px
+
+// Standardise some UI treatments.
+$global-radius: 3px !default;
+$global-transition: calc(1 / 3) + s !default;
+
+// Shadows
+@function blacka($alpha) {
+  @return hsla(0, 0%, 0%, $alpha);
+}
+$global-shadow-1: 0 1px 3px blacka(0.05), 0 1px 1px blacka(0.2) !default;
+$global-shadow-2: 0 2px 8px blacka(0.1), 0 1px 2px blacka(0.15) !default;
+$global-shadow-3: 0 4px 12px blacka(0.11), 0 2px 4px blacka(0.11) !default;
+$global-shadow-4: 0 6px 20px blacka(0.13), 0 2.5px 6px blacka(0.07) !default;
+$global-shadow-5: 0 9px 27px blacka(0.15), 0 3px 8px blacka(0.05) !default;
+
+// $inuit-offsets: true;
+$inuit-fractions: 1 2 3 4 5;
+$inuit-wrapper-width: 1600px;
+
+$spacing-directions: (
+  null: null,
+  't': '-top',
+  'r': '-right',
+  'b': '-bottom',
+  'l': '-left',
+  'h': (
+    '-right',
+    '-left',
+  ),
+  'v': (
+    '-top',
+    '-bottom',
+  ),
+);
+
+$spacing-properties: (
+  'm': 'margin',
+  'p': 'padding',
+);
+
+$spacing-sizes: (
+  \-\-: $unit-1,
+  \-: $unit-3,
+  null: $unit-5,
+  \+: $unit-7,
+  \+ \+: $unit-9,
+  \+ \+ \+: $unit-9 * 2,
+  '0': 0,
+  '1': $unit-1,
+  '2': $unit-2,
+  '3': $unit-3,
+  '4': $unit-4,
+  '5': $unit-5,
+  '6': $unit-6,
+  '7': $unit-7,
+  '8': $unit-8,
+  '9': $unit-9
+);
+
+$responsive-spacing-sizes: (
+  \-\-: $unit-1,
+  \-: $unit-3,
+  null: $unit-5,
+  \+: $unit-7,
+  \+ \+: $unit-9,
+  \+ \+ \+: $unit-9 * 2,
+  '0': 0
+);
+
+$inuit-crops: (
+  '16\\:9': (
+    16: 9,
+  ),
+  '2\\:1': (
+    2: 1,
+  ),
+  '4\\:3': (
+    4: 3,
+  ),
+);
+
+$inuit-ratios: (
+  '1\\:1': (
+    1: 1,
+  ),
+  '16\\:9': (
+    16: 9,
+  ),
+  '2\\:1': (
+    2: 1,
+  ),
+  '4\\:3': (
+    4: 3,
+  ),
+);
+
+$mq-breakpoints: (
+  // mobile:  320px,
+  tablet: 740px,
+  desktop: 980px // wide:    1300px
+);
+
+.step {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 64px;
+  position: relative;
+  width: fit-content;
+
+  .step-container {
+    .step-form {
+      background: white;
+      border-radius: 4px;
+
+      .form-row {
+        flex-wrap: wrap;
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+        .form-item {
+          min-width: 300px;
+          max-width: fit-content;
+          margin-right: 36px;
+
+          .v-popover {
+            width: 100%;
+            .trigger {
+              width: 100%;
+
+              button {
+                &.c-btn {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  height: 38px;
+                }
+              }
+            }
+          }
+
+          .c-input {
+            height: 38px;
+          }
+
+          .check-box,
+          .radio-btn {
+            color: rgba(39, 39, 39, 0.8);
+            letter-spacing: 0.005em;
+            font-weight: 400;
+          }
+
+          .check-box {
+            margin-right: 40px;
+
+            input {
+              height: 18px;
+              width: 18px;
+              margin-right: 10px;
+            }
+          }
+
+          .radio-btn {
+            margin-right: 36px;
+
+            input {
+              height: 16px;
+              width: 16px;
+              margin-right: 10px;
+            }
+          }
+
+          .form-label {
+            margin-bottom: 16px;
+          }
+
+          &.form-item--full-width {
+            min-width: 100%;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scroll-bar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

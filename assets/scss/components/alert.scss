@@ -1,0 +1,61 @@
+/* ==========================================================================
+#ALERT
+========================================================================== */
+
+.c-alert {
+  position: relative;
+  padding: $unit-small $unit;
+  border-bottom: 3px solid;
+  border-radius: $global-radius;
+  background-color: $c-yellow-1;
+  color: $c-yellow-9;
+  border-color: rgba($c-yellow-5, 0.7);
+
+  &--red {
+    background-color: $c-red-1;
+    color: $c-red-9;
+    border-color: rgba($c-red-5, 0.5);
+  }
+
+  &--blue {
+    background-color: $c-primary-1;
+    color: $c-primary-8;
+    border-color: rgba($c-primary-5, 0.7);
+  }
+
+  &--green {
+    background-color: $c-green-1;
+    color: $c-green-9;
+    border-color: rgba($c-green-5, 0.7);
+  }
+
+  &--edgy {
+    border-radius: 0;
+  }
+
+  &.is-collapsed {
+    cursor: pointer;
+  }
+}
+
+.c-alert__message {
+  padding-right: $unit-large;
+
+  .is-collapsed > & {
+    height: $line-height;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.c-alert__btn {
+  position: absolute;
+  top: 0;
+  right: $unit-small;
+
+  > .c-btn {
+    width: $unit;
+  }
+  // line-height: $line-height;
+}

@@ -1,0 +1,24 @@
+/**************************************
+ * SETTINGS
+ **************************************/
+$inuit-global-font-size: 16px;
+$inuit-global-line-height: 24px;
+
+@import 'settings/config';
+@import 'inuitcss/settings/settings.core';
+@import 'settings/global';
+@import 'settings/colors';
+
+$header-height: $unit * 2.5;
+$airline-height: $unit * 1.5;
+
+/**************************************
+ * TOOLS
+ **************************************/
+@import 'inuitcss/tools/tools.font-size';
+@import 'inuitcss/tools/tools.clearfix';
+@import 'inuitcss/tools/tools.hidden';
+@import 'sass-mq/mq';
+@import 'tools/clothoid';
+@import 'tools/preloader-background';
+@import 'tools/font-size';

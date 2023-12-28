@@ -1,0 +1,111 @@
+/* ==========================================================================
+#DROPDOWNS
+========================================================================== */
+
+.c-dropdown__inner.c-dropdown__inner {
+  padding: 0;
+  overflow: hidden;
+  min-width: $unit * 7;
+}
+
+.c-dropdown__header {
+  margin-top: $unit-tiny;
+  padding: 0 $unit-small $unit-tiny;
+  color: $c-muted;
+  font-weight: 600;
+  border-bottom: 1px solid $c-border;
+}
+
+.c-dropdown__search {
+  background-color: $c-gray-2;
+}
+
+/*
+ * 1. The searchbar should be within the viewport otherwise the viewport will
+ *    jump when focus is placed in the searchbar
+ */
+.c-dropdown__scrollable {
+  max-height: calc(80vh - #{$unit}); /* 1 */
+
+  .c-dropdown__header + & {
+    max-height: calc(80vh - #{$unit * 3}); /* 1 */
+  }
+}
+
+.c-dropdown__item {
+  display: block;
+  padding: $unit-tiny $unit-small;
+  line-height: 1.5;
+  text-align: left;
+
+  &.is-active {
+    font-weight: bold;
+  }
+}
+
+.c-dropdown__button {
+  border-width: 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.c-dropdown__link,
+.c-dropdown__button {
+  color: $c-text;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $c-gray-8;
+    color: $c-white;
+    outline: none;
+  }
+
+  &--disabled,
+  &[disabled] {
+    opacity: 0.5;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      cursor: default;
+      color: $c-text;
+    }
+  }
+}
+
+.c-dropdown__divider {
+  margin-top: $unit-tiny;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top: 1px solid $c-border;
+  font-weight: 600;
+  color: $c-muted;
+  text-align: left;
+  line-height: 2.6;
+  text-transform: uppercase;
+
+  &:first-child {
+    border-top-width: 0;
+  }
+}
+
+.c-dropdown__text-divider {
+  margin-top: 0;
+  margin-bottom: 6px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid $c-border;
+  font-weight: 500;
+  color: $c-muted;
+  text-align: left;
+  line-height: 2.6;
+  text-transform: uppercase;
+  font-size: 12px;
+
+  &:first-child {
+    border-top-width: 0;
+  }
+}

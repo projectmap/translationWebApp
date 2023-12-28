@@ -1,0 +1,231 @@
+/* ==========================================================================
+   #TIMELINE
+   ========================================================================== */
+
+$node: $unit-5;
+
+.c-timeline {
+  @include font-size($font-size-tiny);
+
+  --line: #{$c-gray-3};
+
+  position: relative;
+  margin: 0;
+  padding-top: $unit-3;
+  list-style: none;
+}
+
+.c-timeline__form {
+  @include font-size($font-size-small);
+
+  position: relative;
+  z-index: 2;
+  padding: $unit-3;
+  margin-top: $unit-3;
+  background-color: $c-white;
+  border-top: 2px solid var(--line);
+
+  .is-truncated & {
+    display: none;
+  }
+}
+
+.c-timeline__item {
+  --bg: #{$c-white};
+  --hover: #{$c-gray-1};
+  --line: #{$c-gray-3};
+  --text: #{$c-gray-8};
+
+  position: relative;
+  padding: $unit-3 $unit-3 $unit-3 $unit-7;
+  color: var(--text);
+  background-color: var(--bg);
+  min-height: $unit-6;
+
+  &.is-clickable {
+    cursor: pointer;
+
+    &:hover {
+      --bg: #{$c-gray-1};
+    }
+  }
+
+  &.is-user {
+    --bg: #{$c-blue-1};
+    --line: #{mix($c-blue-3, $c-gray-3)};
+    --text: #{$c-blue-8};
+
+    &.is-clickable:hover {
+      --bg: #{$c-blue-2};
+    }
+  }
+
+  &.is-green {
+    --bg: #{$c-green-1};
+    --line: #{mix($c-green-3, $c-gray-3)};
+    --text: #{$c-green-8};
+
+    &.is-clickable:hover {
+      --bg: #{$c-green-2};
+    }
+  }
+
+  &.is-red {
+    --bg: #{$c-red-1};
+    --line: #{mix($c-red-3, $c-gray-3)};
+    --text: #{$c-red-8};
+
+    &.is-clickable:hover {
+      --bg: #{$c-red-2};
+    }
+  }
+
+  &.is-purple {
+    --bg: #{$c-purple-1};
+    --line: #{mix($c-purple-3, $c-gray-3)};
+    --text: #{$c-purple-8};
+
+    &.is-clickable:hover {
+      --bg: #{$c-purple-2};
+    }
+  }
+
+  .is-truncated &:not(.c-timeline__label) > *:not(.c-node) {
+    display: none;
+  }
+}
+
+.c-timeline::before,
+.c-timeline__item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: ($unit-7 - 2px) / 2;
+  width: 2px;
+  background-color: var(--line);
+}
+
+.c-timeline__label {
+  font-weight: bold;
+  color: $c-gray-4;
+  padding: $unit-tiny $unit-small;
+}
+
+.c-timeline__label-inner {
+  position: relative;
+  z-index: 2;
+  background-color: $c-white;
+  line-height: 2;
+}
+
+.c-timeline__header {
+  position: relative;
+}
+
+.c-timeline__controls {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  visibility: hidden;
+  white-space: nowsrap;
+  background-color: var(--bg);
+  border-radius: $global-radius;
+  box-shadow: 0 0 5px 5px var(--bg);
+
+  .c-timeline__item:hover & {
+    visibility: visible;
+  }
+}
+
+.c-timeline__say {
+  --fill: #{$c-white};
+
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: $global-radius;
+  margin-left: -$unit-1 - 1px;
+  background-color: var(--fill);
+  padding: $unit-1 * 1.5 $unit-1 * 2 $unit-1;
+
+  .is-deleted & {
+    --line: transparent;
+    --fill: transparent;
+
+    margin-left: 0;
+    padding: 0;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(50% - 6px);
+    left: -12px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+  }
+
+  &::before {
+    border-right-color: var(--line);
+  }
+
+  &::after {
+    border-right-color: var(--fill);
+    margin-top: 1px;
+    margin-left: 2px;
+    border-width: 5px;
+  }
+}
+
+.c-node,
+.c-timeline__node {
+  &,
+  &::after {
+    position: absolute;
+    z-index: 2;
+    width: $node;
+    height: $node;
+    border-radius: 50%;
+  }
+
+  left: $unit-7 / 2 - $node / 2;
+  top: calc(50% - #{$node / 2});
+  background-color: var(--bg);
+  border: 4px solid var(--bg);
+  color: var(--text);
+  text-align: center;
+  line-height: $node - 8px;
+  display: flex;
+  justify-content: center;
+
+  &::after {
+    content: '';
+    left: -4px;
+    top: -4px;
+    border: 2px solid transparent;
+
+    .is-clickable:hover & {
+      border-color: var(--line);
+    }
+  }
+
+  > .u-icon {
+    opacity: 0.75;
+  }
+
+  .is-current & {
+    background-color: $c-blue-5;
+    color: $c-white;
+
+    > .u-icon {
+      opacity: 1;
+    }
+  }
+}

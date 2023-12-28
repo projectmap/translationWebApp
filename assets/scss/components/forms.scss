@@ -1,0 +1,121 @@
+/* ==========================================================================
+   #FORMS
+   ========================================================================== */
+
+/*
+ * 1. deduct 1px border width
+ */
+.c-form {
+  input,
+  textarea,
+  select,
+  label {
+    display: inline-block;
+  }
+
+  input,
+  textarea {
+    padding: $unit-3 - 1px $unit-4;
+    /* [1] */
+  }
+
+  select {
+    text-indent: $unit-4;
+    height: floor($font-size * 1.2) + ($unit-3 * 2);
+  }
+
+  label {
+    margin-bottom: $unit-tiny;
+    font-weight: 600;
+  }
+
+  dd {
+    margin-left: 0;
+  }
+
+  &--auto {
+    input,
+    textarea,
+    select,
+    label {
+      width: auto;
+    }
+  }
+
+  &--group {
+    display: flex;
+    align-items: flex-start;
+
+    > button,
+    > input[type='submit'] {
+      flex-shrink: 0;
+    }
+  }
+
+  &--inverse {
+    input:focus,
+    button:focus {
+      outline: none;
+      box-shadow: 0 0 6px 2px rgba($c-white, 0.6);
+    }
+
+    input[type='checkbox']:focus {
+      box-shadow: 0 1px 6px 2px rgba($c-white, 0.6);
+    }
+  }
+
+  &--large {
+    input,
+    textarea,
+    select {
+      padding: $unit $unit-large;
+    }
+  }
+}
+
+.c-form__list {
+  > li {
+    margin-bottom: $unit;
+  }
+}
+
+.c-form__error,
+.c-form__info {
+  @include inuit-font-size($font-size-small);
+
+  padding: $unit-tiny/2 $unit;
+  border-radius: $global-radius;
+  background-color: $c-gray-3;
+  margin-bottom: 3px;
+}
+
+span.c-form__error,
+span.c-form__info {
+  display: block;
+}
+
+.c-form__error {
+  color: $c-red-6;
+  background-color: $c-red-1;
+}
+
+.c-form__error--small {
+  color: $c-red-6;
+  font-size: 14px;
+  margin-top: 2px;
+  margin-bottom: 0px;
+}
+
+.c-form__info {
+  color: $c-primary-5;
+  background-color: lighten($c-primary-5, 45%);
+}
+
+.c-input--outline {
+  border: 1px solid #d3d7d9;
+  border-radius: 4px;
+}
+
+.c-input--outline-error {
+  border: 1px solid $c-red-6 !important;
+}

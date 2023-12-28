@@ -1,0 +1,22 @@
+/* ==========================================================================
+   #AVATAR
+   ========================================================================== */
+
+.c-avatar {
+  display: inline-block;
+  width: $unit;
+  height: $unit;
+  text-align: center;
+  border-radius: $global-radius;
+  background-color: $c-muted;
+}
+
+.c-avatar--small {
+  width: $unit-small;
+  height: $unit-small;
+}
+
+.c-avatar--large {
+  width: $unit-large;
+  height: $unit-large;
+}

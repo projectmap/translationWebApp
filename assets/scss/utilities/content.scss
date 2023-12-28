@@ -1,0 +1,83 @@
+/* ==========================================================================
+   #CONTENT (please refactor me)
+   ========================================================================== */
+
+.u-content {
+  /* Element styles */
+  // h1,
+  // h2,
+  // h3 {
+  //     font-weight: 600 !important;
+  // }
+
+  /* stylelint-disable */
+  address,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote,
+  p,
+  pre,
+  dd,
+  dl,
+  ol,
+  ul,
+  figure,
+  hr,
+  table,
+  fieldset {
+    margin-bottom: $unit-small;
+    text-align: start;
+  }
+  /* stylelint-enable */
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Class styles */
+  &.indent {
+    text-indent: $unit;
+  }
+
+  &.signature {
+    font-style: italic;
+  }
+
+  sup.footnote {
+    vertical-align: baseline;
+
+    > a.footnote {
+      display: none;
+    }
+
+    &::after {
+      content: '[footnote]';
+      color: $c-yellow-5;
+      margin: 0 0.5em;
+    }
+  }
+
+  /* diff */
+  .added,
+  .removed {
+    position: relative;
+    border-radius: $global-radius;
+    padding: 0 0.2em;
+    box-decoration-break: clone;
+  }
+
+  .added {
+    color: $c-green-7;
+    background-color: $c-green-1;
+  }
+
+  .removed {
+    color: $c-red-6;
+    background-color: $c-red-1;
+    text-decoration: line-through;
+  }
+}

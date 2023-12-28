@@ -1,0 +1,70 @@
+/* ==========================================================================
+   #MENU
+   ========================================================================== */
+
+.c-menu {
+  max-width: $unit-5 * 12;
+  border: 2px solid $c-border;
+  border-radius: $global-radius;
+  background-color: $c-white;
+
+  > hr {
+    margin: $unit-1 0;
+  }
+}
+
+.c-menu__heading,
+.c-menu__link {
+  padding: $unit-2 $unit-4;
+}
+
+.c-menu__heading {
+  @include font-size($font-size);
+
+  font-weight: 600;
+  margin-bottom: 0;
+  color: $c-gray-3;
+  text-transform: uppercase;
+
+  &:not(:first-child) {
+    margin-top: $unit-3;
+  }
+}
+
+.c-menu__link {
+  position: relative;
+  display: block;
+  color: $c-text;
+
+  &:first-child {
+    border-top-right-radius: $global-radius - 2px;
+    border-top-left-radius: $global-radius - 2px;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: $global-radius - 2px;
+    border-bottom-left-radius: $global-radius - 2px;
+  }
+
+  &:hover,
+  &:focus,
+  &.is-active {
+    color: $c-text;
+    background-color: $c-gray-1;
+    border-bottom-width: 0 !important;
+  }
+
+  &.is-active {
+    cursor: default;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -2px;
+      width: 2px;
+      background-color: $c-primary-5;
+    }
+  }
+}
